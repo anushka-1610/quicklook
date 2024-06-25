@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Look AR</title>
+</head>
+<body>
+  <h1>View in AR</h1>
+  <!-- Link to the USDZ file for Quick Look -->
+  <a href="./assets/fridge_bake_6.usdz" rel="ar" class="ar-button">
+    <img src="./assets/right_arrow_final.png" alt="Model Thumbnail" />
+  </a>
+
+  <!-- Optional: Additional styling for the AR button -->
+  <style>
+    .ar-button {
+      display: inline-block;
+      margin: 20px;
+    }
+    .ar-button img {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+  </style>
+</body>
+</html>
