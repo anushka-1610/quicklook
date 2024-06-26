@@ -227,12 +227,12 @@ export const setupButton = (button) => {
     }
   }
 };
-
+const promt = document.querySelector("#prompt")
 // go through all ar-button tags on the page and initialize them
 const buttons = document.querySelectorAll("ar-button");
 for (let i = 0; i < buttons.length; i++) {
   const button = buttons.item(i);
+  prompt.innerHTML = button;
   setupButton(button);
 }
-
 // made my first commit 
