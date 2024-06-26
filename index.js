@@ -50,6 +50,7 @@ export const compat = {
 };
 
 export const activateAR = (props, listener) => {
+  promt.style.display = "block";
   const anchor = document.createElement("a");
   const href = setupHref(props);
   anchor.setAttribute("href", href);
@@ -233,7 +234,6 @@ const promt = document.querySelector("#prompt")
 const buttons = document.querySelectorAll("ar-button");
 for (let i = 0; i < buttons.length; i++) {
   const button = buttons.item(i);
-  prompt.innerHTML = button;
   setupButton(button);
 }
 // made my first commit 
