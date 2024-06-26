@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quick Look AR</title>
   <script type="module" src="./index.js"></script>
+  <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
   <h1>View in AR</h1>
   <!-- Link to the USDZ file for Quick Look -->
@@ -14,11 +17,9 @@
   </a> -->
 
   <ar-button class="ar-button"
-    src="./assets/a4.glb"
-    ios-src="./assets/2.usdz"
-    link="https://www.nasa.gov/"
-    title="A 3D model of an astronaut">
-      Click to see in Augmented Reality 
+    src="https://cdn.glitch.global/d46f73ae-be85-4ed3-adb8-c2ba33da721d/a5.glb?v=1719381219004"
+    ios-src="./assets/2.usdz" link="https://www.nasa.gov/" title="A 3D model of an astronaut">
+    Click to see in Augmented Reality
   </ar-button>
 
   <!-- Optional: Additional styling for the AR button -->
@@ -27,6 +28,7 @@
       display: inline-block;
       margin: 20px;
     }
+
     .ar-button img {
       width: 200px;
       height: 200px;
@@ -35,4 +37,5 @@
     }
   </style>
 </body>
+
 </html>
