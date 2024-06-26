@@ -94,6 +94,7 @@ const setupHref = (props) => {
       customBanner,
       customHeight,
       noScale,
+      stopAnimation //new attribute
     } = props;
 
     href = `${iosSrc}#`;
@@ -121,6 +122,9 @@ const setupHref = (props) => {
     }
     if (noScale != null) {
       href += `&allowsContentScaling=0`;
+    }
+    if (stopAnimation) {
+      href += `&animation=none`; // Assuming 'animation' is the parameter to control the animation
     }
   } else if (compat.IS_SCENEVIEWER_CANDIDATE) {
     const { src, title, fallbackUrl, link, noScale } = props;
@@ -174,6 +178,7 @@ export const setupButton = (button) => {
       const customBanner = button.getAttribute("custom-banner");
       const customHeight = button.getAttribute("custom-height");
       const noScale = button.getAttribute("no-scale");
+      const stopAnimation = button.getAttribute("stop-animation"); // New attribute
 
       activateAR(
         {
@@ -186,6 +191,7 @@ export const setupButton = (button) => {
           customBanner,
           customHeight,
           noScale,
+          stopAnimation
         },
         button
       );
