@@ -38,8 +38,8 @@ export const compat = {
     const tempAnchor = document.createElement("a");
     return Boolean(
       tempAnchor.relList &&
-        tempAnchor.relList.supports &&
-        tempAnchor.relList.supports("ar")
+      tempAnchor.relList.supports &&
+      tempAnchor.relList.supports("ar")
     );
   })(),
 
@@ -73,10 +73,10 @@ export const activateAR = (props, listener) => {
         }
       },
       false
-      );
-    }
+    );
+  }
 
-    anchor.click();
+  anchor.click();
 };
 
 const setupHref = (props) => {
@@ -145,7 +145,7 @@ const setupHref = (props) => {
   }
   return href;
 };
-
+// button.setAttribute("animation-name","Animation")
 export const setupButton = (button) => {
   // skip button if it was already initialized beforehand
   if (button.getAttribute("ar") != null) {
@@ -192,6 +192,7 @@ export const setupButton = (button) => {
   } else if (compat.IS_SCENEVIEWER_CANDIDATE) {
     // system supports AR via scene viewer
     button.setAttribute("ar", "scene-viewer");
+
     button.dispatchEvent(
       new CustomEvent("initialized", { detail: "scene-viewer" })
     );
